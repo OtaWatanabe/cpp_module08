@@ -2,6 +2,7 @@
 # define SPAN_HPP
 # include <set>
 # include <iostream>
+# include <climits>
 
 class Span {
 private:
@@ -20,7 +21,7 @@ public:
 		unsigned int	count = 0;
 	
 		for (InputIterator it = begin; it != end; ++it) ++count;
-		if (_max < count + _set.size()) throw(std::length_error("elenents are full"));
+		if (_max < count || _max < count + _set.size()) throw(std::length_error("elenents are full"));
 		_set.insert(begin, end);
 	}
 };

@@ -1,4 +1,5 @@
 #include "Span.hpp"
+#include <vector>
 
 int main()
 {
@@ -28,11 +29,11 @@ int main()
 	for (int i = 0; i < 10000; ++i) v[i] = i;
 	sp1.addNumbers(v.begin(), v.end());
 	std::cout << "sp1 short: " << sp1.shortestSpan() << std::endl;
-	std::cout << "sp1 long: " << sp1.shortestSpan() << std::endl;
+	std::cout << "sp1 long: " << sp1.longestSpan() << std::endl;
 	sp2.addNumber(2);
 	sp2.addNumber(5);
 	std::cout << "sp2 short: " << sp2.shortestSpan() << std::endl;
-	std::cout << "sp2 long: " << sp2.shortestSpan() << std::endl;
+	std::cout << "sp2 long: " << sp2.longestSpan() << std::endl;
 	try {
 		int sspan = sp3.shortestSpan();
 		std::cout << "sp3 short: " << sspan << std::endl;

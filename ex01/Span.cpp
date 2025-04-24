@@ -32,7 +32,7 @@ int	Span::shortestSpan(void) {
 	int	ret = INT_MAX;
 
 	if (_set.size() < 2) {
-		throw(std::invalid_argument("Set size must be at least 2"));
+		throw(std::invalid_argument("Data size must be at least 2"));
 	}
 	for (std::set<int>::const_iterator it = _set.begin();;) {
 		int	tmp = *it;
@@ -45,7 +45,7 @@ int	Span::shortestSpan(void) {
 
 int	Span::longestSpan(void) {
 	if (_set.size() < 2) {
-		throw(std::invalid_argument("Set size must be at least 2"));
+		throw(std::invalid_argument("Data size must be at least 2"));
 	}
 	return *(_set.rbegin()) - *(_set.begin());
 }
